@@ -148,7 +148,7 @@ f=open(file_name, "r")
 print(f.read())
 f.close()
 
-# File kboutputsample.txt processed in this section, processed typed string shown printed at end
+# File output.txt processed in this section, processed typed string shown printed at end
 
 # Assumption made as to the initial state of the keyboard
 # Not implemented in this version, added in case of future work
@@ -163,7 +163,6 @@ raw_typed_message = ""
 cursor_position = 0
 
 for data_line in open(file_name,"r").readlines():
-    #capdata = data_line.split(":")
     n = 2
     capdata = [data_line[i:i+n] for i in range(0, len(data_line), n)]
     if capdata[2] != "00":
